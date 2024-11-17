@@ -29,16 +29,19 @@ namespace_imports = [
     'vendor/qcom/opensource/display',
 ]
 
-
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_vendor' if partition in ['odm', 'vendor'] else None
-
 
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
         'com.qualcomm.qti.dpm.api@1.0',
         'libmmosal',
+        'libpwirisfeature',
+        'libpwirishalwrapper',
+        'vendor.pixelworks.hardware.display@1.0',
+        'vendor.pixelworks.hardware.display@1.1',
+        'vendor.pixelworks.hardware.feature@1.0',
         'vendor.qti.diaghal@1.0',
         'vendor.qti.hardware.wifidisplaysession@1.0',
         'vendor.qti.imsrtpservice@3.0',
