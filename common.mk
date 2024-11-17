@@ -203,9 +203,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     NrModeSwitcher
 
+# QTI
+TARGET_COMMON_QTI_COMPONENTS := all
+
 # Overlays
 $(call inherit-product, hardware/oplus/overlay/generic/generic.mk)
-$(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-sun
