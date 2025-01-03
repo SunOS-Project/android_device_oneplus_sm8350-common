@@ -10,6 +10,6 @@
     <string name="oplus_camera_aux_packages_startwith">com.google.android.GoogleCamera</string>
 
     <!-- Custom doze -->
-    <string name="config_doze_pickUpSensorType">android.sensor.tilt_detector</string>
+    <bool name="config_doze_useNativePickUpSensor">true</bool>
 
 </resources>
