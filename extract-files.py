@@ -29,11 +29,17 @@ namespace_imports = [
     'vendor/qcom/opensource/display',
 ]
 
+def lib_fixup_odm_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_odm' if partition == 'odm' else None
+
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_vendor' if partition in ['odm', 'vendor'] else None
 
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
+    (
+        'vendor.oplus.hardware.osense.client-V1-ndk_platform',
+    ): lib_fixup_odm_suffix,
     (
         'com.qualcomm.qti.dpm.api@1.0',
         'com.qualcomm.qti.imscmservice@2.0',
@@ -71,6 +77,8 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.hardware.data.latency@1.0',
         'vendor.qti.hardware.data.lce@1.0',
         'vendor.qti.hardware.data.qmi@1.0',
+        'vendor.qti.hardware.embmssl@1.0',
+        'vendor.qti.hardware.embmssl@1.1',
         'vendor.qti.hardware.mwqemadapter@1.0',
         'vendor.qti.hardware.qccsyshal@1.0',
         'vendor.qti.hardware.qccvndhal@1.0',
@@ -104,6 +112,7 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.hardware.radio.uim_remote_client@1.1',
         'vendor.qti.hardware.radio.uim_remote_client@1.2',
         'vendor.qti.hardware.radio.uim_remote_server@1.0',
+        'vendor.qti.hardware.limits@1.0',
         'vendor.qti.hardware.slmadapter@1.0',
         'vendor.qti.hardware.iop@2.0',
         'vendor.qti.hardware.wifidisplaysession@1.0',
@@ -140,6 +149,8 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'odm/bin/hw/vendor.pixelworks.hardware.display.iris-service': blob_fixup()
         .add_needed('libprocessgroup.so'),
+    'odm/bin/hw/vendor.oplus.hardware.charger-V3-service': blob_fixup()
+        .replace_needed('libosenseaidlhalclient.so', 'libosenseaidlhalclient_charge.so'),
     ('odm/lib64/mediadrm/libwvdrmengine.so', 'odm/lib64/libwvhidl.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
     'product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml': blob_fixup()

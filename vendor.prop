@@ -155,6 +155,9 @@ ro.vendor.perf.scroll_opt=1
 ro.vendor.qspm.enable=true
 ro.vendor.extension_library=libqti-perfd-client.so
 
+# Pasr
+vendor.pasr.activemode.enabled=true
+
 # QTEE
 persist.vendor.qteeconnector.retrying_interval=30
 persist.vendor.qteeconnector.retrying_timeout=2000

@@ -79,6 +79,7 @@ vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
 vendor/lib/soundfx/libshoebox.so
 vendor/lib64/libadsprpc.so
+vendor/lib64/vendor.qti.voiceprint@1.0.so
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
@@ -215,9 +216,14 @@ vendor/etc/cvp/v2.0/facedetection/model1.dat
 vendor/etc/cvp/v2.1/facedetection/model2.dat
 vendor/lib/libcvp2_1.so
 vendor/lib/libcvp_common.so
+vendor/lib64/libFace3DTA.so
+vendor/lib64/libFace3D_hlos.so
+vendor/lib64/libQ6MSFR_manager_stub.so
 vendor/lib64/libcvp2_1.so
 vendor/lib64/libcvp_common.so
+vendor/lib64/libcvp_util.so
 vendor/lib64/libcvpcpuRev_skel.so
+vendor/lib64/libface3d_dev.so
 vendor/lib64/vendor.qti.hardware.cvp@1.0.so
 
 # Diag
@@ -238,7 +244,10 @@ vendor/etc/Oplus_QC_LTM_Commercial_SM7325_2021_05_20.pfm
 vendor/etc/init/feature_enabler_client.rc
 
 # Display (HDR)
+vendor/lib64/libhdr_stub.so
 vendor/lib64/libhdr_tm.so
+vendor/lib64/libhdrdynamic.so
+vendor/lib64/libhdrdynamicootf.so
 
 # Display (HWC)
 odm/lib64/libsnapdragoncolor-pxlw.so
@@ -247,7 +256,9 @@ vendor/bin/qdcmss
 vendor/etc/init/qdcmss.rc
 vendor/etc/snapdragon_color_libs_config.xml
 vendor/lib64/libdisplayconfig.qti.so
+vendor/lib64/libdpp_manager.so
 vendor/lib64/libdpps.so
+vendor/lib64/libgame_enhance.so
 vendor/lib64/libhistogram.so
 vendor/lib64/libqdcm-mode-parser.so
 vendor/lib64/libqdutils.so
@@ -255,6 +266,7 @@ vendor/lib64/libsdmcore.so
 vendor/lib64/libsdmutils.so
 vendor/lib64/libsnapdragoncolor-manager.so
 vendor/lib64/libsnapdragoncolor-qdcm.so
+vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
 # Display (SDM)
 vendor/etc/display/DPU660.xml
@@ -317,9 +329,20 @@ vendor/lib64/libdrmtime.so
 vendor/lib64/libops.so
 vendor/lib64/libqisl.so
 vendor/lib64/librpmb.so
+vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libspl.so
 vendor/lib64/libssd.so
+vendor/lib64/libtzdrmgenprov.so
 vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
+
+# Embmssl
+vendor/bin/embmsslServer
+vendor/etc/init/init.embmssl_server.rc
+vendor/lib64/libembmsservice.so
+vendor/lib64/vendor.qti.hardware.embmssl@1.0-adapter-helper.so
+vendor/lib64/vendor.qti.hardware.embmssl@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.qti.hardware.embmssl@1.1-adapter-helper.so
+vendor/lib64/vendor.qti.hardware.embmssl@1.1.so;MODULE_SUFFIX=_vendor
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
@@ -378,6 +401,7 @@ vendor/lib64/hw/vulkan.adreno.so
 odm/etc/izat.conf
 odm/etc/sap.conf
 vendor/app/CACertService/CACertService.apk
+vendor/app/EidService_V2/EidService_V2.apk
 vendor/bin/hw/android.hardware.gnss@2.1-service-qti
 vendor/bin/loc_launcher
 vendor/bin/lowi-server;DISABLE_CHECKELF
@@ -412,6 +436,8 @@ vendor/lib64/libasn1crtx.so
 vendor/lib64/libbatching.so
 vendor/lib64/libcacertclient.so
 vendor/lib64/libdataitems.so
+vendor/lib64/libgarden.so
+vendor/lib64/libgarden_haltests_e2e.so
 vendor/lib64/libgdtap.so
 vendor/lib64/libgeofencing.so
 vendor/lib64/libgnss.so
@@ -565,6 +591,15 @@ vendor/lib/libgcs-osal.so
 vendor/lib/libgcs.so
 vendor/lib/liblistensoundmodel2.so
 vendor/lib/libmulawdec.so
+vendor/lib64/libcapiv2svacnn.so
+vendor/lib64/libcapiv2svarnn.so
+vendor/lib64/libcapiv2vop.so
+
+# Limits
+vendor/bin/hw/vendor.qti.hardware.limits@1.0-service
+vendor/etc/init/vendor.qti.hardware.limits@1.0-service.rc
+vendor/etc/vintf/manifest/vendor.qti.hardware.limits@1.0-service.xml
+vendor/lib64/vendor.qti.hardware.limits@1.0.so;MODULE_SUFFIX=_vendor
 
 # Media
 odm/lib/libaiboost_qnn_sr.so
@@ -598,9 +633,58 @@ vendor/lib/libqcodec2_platform.so
 vendor/lib/libqcodec2_utils.so
 vendor/lib/libqcodec2_v4l2codec.so
 vendor/lib64/libmmosal.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libqcodec2_base.so
+vendor/lib64/libqcodec2_basecodec.so
+vendor/lib64/libqcodec2_core.so
+vendor/lib64/libqcodec2_hooks.so
+vendor/lib64/libqcodec2_mockfilter.so
+vendor/lib64/libqcodec2_platform.so
+vendor/lib64/libqcodec2_utils.so
+vendor/lib64/libqcodec2_v4l2codec.so
+
+# MMIe
+vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
+vendor/bin/mmid
+vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc
+vendor/etc/permissions/vendor.qti.hardware.factory.xml
+vendor/lib64/vendor.qti.hardware.factory@1.0.so
+vendor/lib64/vendor.qti.hardware.factory@1.1.so
 
 # Native public libraries
 vendor/etc/public.libraries.txt
+
+# OPLUS Charger
+odm/bin/hw/vendor.oplus.hardware.charger-V3-service
+odm/bin/hw/wlschgd
+odm/etc/init/vendor.oplus.hardware.charger-V3-service.rc
+odm/etc/permissions/vendor-oplus-hardware-charger.xml
+odm/etc/vintf/manifest/manifest_oplus_charger_aidl.xml
+odm/lib64/libosenseaidlhalclient.so:odm/lib64/libosenseaidlhalclient_charge.so;FIX_SONAME
+odm/lib64/vendor.oplus.hardware.charger-V3-ndk_platform.so
+odm/lib64/vendor.oplus.hardware.charger@1.0.so
+
+# OPLUS Display
+odm/bin/cwb_utils
+odm/bin/hw/vendor.oplus.hardware.displaypanelfeature@1.0-service
+odm/bin/hw/vendor.oplus.hardware.mmdisplayfeature@1.0-service
+odm/etc/init/vendor.oplus.hardware.displaypanelfeature@1.0-service.rc
+odm/etc/init/vendor.oplus.hardware.mmdisplayfeature@1.0-service.rc
+odm/etc/permissions/vendor-oplus-hardware-displaypanelfeature.xml
+odm/etc/vintf/manifest/manifest_oplus_displaypanelfeature.xml
+odm/etc/vintf/manifest/manifest_oplus_mmdisplayfeature.xml
+odm/lib64/libdpservice.so
+odm/lib64/vendor.oplus.hardware.displaypanelfeature@1.0.so
+odm/lib64/vendor.oplus.hardware.mmdisplayfeature@1.0.so
+odm/lib64/vendor.oplus.hardware.osense.client-V1-ndk_platform.so;MODULE_SUFFIX=_odm
+
+# OPLUS Project
+odm/bin/hw/vendor.oplus.hardware.stability.oplus_project-V1-service
+odm/etc/init/vendor.oplus.hardware.stability.oplus_project-V1-service.rc
+odm/etc/permissions/vendor-oplus-hardware-stability-oproject-V1.xml
+odm/etc/permissions/vendor-oplus-hardware-stability-oproject.xml
+odm/etc/vintf/manifest/manifest_oplus_stability_project_aidl.xml
+odm/lib64/vendor.oplus.hardware.stability.oplus_project-V1-ndk_platform.so
+odm/lib64/vendor.oplus.hardware.stability.oplus_project@1.0.so
 
 # Peripheral manager
 vendor/bin/pm-proxy
@@ -629,16 +713,23 @@ vendor/lib/libqti-util.so
 vendor/lib/libqti-utils.so
 vendor/lib64/liblearningmodule.so
 vendor/lib64/libmeters.so
+vendor/lib64/libpasrutils.so
 vendor/lib64/libperfconfig.so
 vendor/lib64/libperfgluelayer.so
 vendor/lib64/libperfioctl.so
+vendor/lib64/libpowercallback.so
+vendor/lib64/libpowercore.so
 vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
 vendor/lib64/libqti-utils.so
 vendor/lib64/libskewknob.so
+vendor/lib64/libvideooptfeature.so
+vendor/lib64/vendor.qti.hardware.iop@1.0.so
+vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
 
 # Perf LM
+odm/etc/lm/GameOptimizationFeature.xml
 vendor/etc/lm/AdaptLaunchFeature.xml
 vendor/etc/lm/AppClassifierFeature.xml
 vendor/etc/lm/GameOptimizationFeature.xml
@@ -648,6 +739,8 @@ vendor/etc/lm/prekill/prekill_2GB.data
 vendor/etc/lm/prekill/prekill_4GB.data
 vendor/etc/lm/prekill/prekill_6GB.data
 vendor/etc/lm/sPLHFeature.xml
+vendor/etc/pwr/PowerFeatureConfig.xml
+vendor/etc/pwr/VideoPowerOptFeature.xml
 vendor/lib/vendor.qti.memory.pasrmanager@1.0.so
 vendor/lib/vendor.qti.memory.pasrmanager@1.1.so
 vendor/lib64/libadaptlaunch.so
@@ -672,6 +765,10 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
+# PSI Client
+vendor/bin/hw/vendor.qti.psiclient@1.0-service
+vendor/etc/init/vendor.qti.psiclient@1.0-service.rc
+
 # QCC
 vendor/bin/hw/vendor.qti.hardware.qccvndhal@1.0-service
 vendor/etc/init/vendor.qti.hardware.qccvndhal@1.0-service.rc
@@ -679,6 +776,16 @@ vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so;MODULE_SUFFIX=_vendor
+
+# QESDK
+vendor/bin/qesdk-manager
+vendor/etc/init/qesdk-manager.rc
+vendor/lib64/libqesdk.so
+vendor/lib64/libqesdk_manager.so
+vendor/lib64/vendor.qti.qesdhal@1.0.so
+vendor/lib64/vendor.qti.qesdhal@1.1-impl.so
+vendor/lib64/vendor.qti.qesdhal@1.1.so
+vendor/lib64/vendor.qti.qesdsys-V1-ndk_platform.so
 
 # QCV
 vendor/bin/init.qti.qcv.sh
@@ -981,6 +1088,16 @@ vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
+
+# Secure Processor
+vendor/bin/hw/vendor.qti.hardware.secureprocessor@1.0
+vendor/etc/init/vendor.qti.hardware.secureprocessor@1.0.rc
+vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so
+vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so
+vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0-helper.so
+vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0.so
+vendor/lib64/vendor.qti.hardware.secureprocessor.config@1.0.so
+vendor/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so
 
 # Thermal engine
 vendor/bin/thermal-engine
@@ -1486,9 +1603,12 @@ vendor/lib/libqconfigclient.so
 vendor/lib/vendor.qti.hardware.qconfig@1.0.so
 vendor/lib/vendor.qti.hardware.vpp@2.0.so
 vendor/lib64/libqconfigclient.so
+vendor/lib64/libvppclient.so
 vendor/lib64/libvpphcp.so
 vendor/lib64/libvpphvx.so
+vendor/lib64/libvppimmotion.so
 vendor/lib64/libvpplibrary.so
+vendor/lib64/libvpptestutils.so
 vendor/lib64/vendor.qti.hardware.qconfig@1.0.so
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so

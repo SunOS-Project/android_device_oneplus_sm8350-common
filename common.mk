@@ -206,6 +206,10 @@ PRODUCT_PACKAGES += \
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := all
 
+# OSENSE
+PRODUCT_PACKAGES += \
+    vendor.oplus.hardware.osense.client-service
+
 # Overlays
 $(call inherit-product, hardware/oplus/overlay/generic/generic.mk)
 
