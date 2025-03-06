@@ -276,6 +276,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Scudo
 PRODUCT_USE_SCUDO := true
 
+# Sun services
+PRODUCT_PACKAGES += \
+    vendor.sun.hardware.battery-service.oplus \
+    vendor.sun.hardware.displayfeature-service.oplus \
+    vendor.sun.hardware.vibratorExt-service.oplus
+
 # Telephony
 PRODUCT_PACKAGES += \
     extphonelib \
@@ -341,7 +347,7 @@ PRODUCT_COPY_FILES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.oplus
+    android.hardware.vibrator.service-stub-richtap
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml

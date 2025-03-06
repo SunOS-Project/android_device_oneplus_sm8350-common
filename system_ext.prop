@@ -33,6 +33,17 @@ persist.data.df.agg.dl_pkt=10
 persist.data.df.agg.dl_size=4096
 persist.vendor.data.mode=concurrent
 
+# Off-screen gestures
+persist.sys.sun.gesture.single_tap=262
+persist.sys.sun.gesture.left_arrow=251
+persist.sys.sun.gesture.right_arrow=250
+persist.sys.sun.gesture.two_fingers_down=253
+persist.sys.sun.gesture.draw_m=258
+persist.sys.sun.gesture.draw_o=252
+persist.sys.sun.gesture.draw_s=264
+persist.sys.sun.gesture.draw_v=248
+persist.sys.sun.gesture.draw_w=259
+
 # Radio
 ril.subscription.types=NV,RUIM
 

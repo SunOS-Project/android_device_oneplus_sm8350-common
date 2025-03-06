@@ -901,6 +901,10 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 
+# RichTap
+odm/etc/aac_richtap.config
+odm/lib64/libaacvibrator.so:vendor/lib64/libaacvibrator.so
+ 
 # Sensors
 odm/bin/oplus_sensor_fb
 odm/lib64/liboplus_service.so
