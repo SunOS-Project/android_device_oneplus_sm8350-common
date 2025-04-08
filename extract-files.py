@@ -115,6 +115,11 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.hardware.limits@1.0',
         'vendor.qti.hardware.slmadapter@1.0',
         'vendor.qti.hardware.iop@2.0',
+        'vendor.qti.hardware.perf@2.0',
+        'vendor.qti.hardware.perf@2.1',
+        'vendor.qti.hardware.perf@2.2',
+        'vendor.qti.hardware.perf@2.3',
+        'vendor.qti.hardware.perf2-V1-ndk',
         'vendor.qti.hardware.wifidisplaysession@1.0',
         'vendor.qti.ims.callcapability@1.0',
         'vendor.qti.ims.configservice@1.0',
@@ -140,6 +145,7 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.latency@2.0',
         'vendor.qti.latency@2.1',
         'vendor.qti.qspmhal@1.0',
+        'vendor.qti.qspmhal-V1-ndk',
     ): lib_fixup_vendor_suffix,
     (
         'libwpa_client',
@@ -159,8 +165,6 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('uag', 'schedutil'),
     ('vendor/etc/media_lahaina/video_system_specs.json', 'vendor/etc/media_yupik_v1/video_system_specs.json'): blob_fixup()
         .regex_replace('"max_retry_alloc_output_timeout": 1000,', '"max_retry_alloc_output_timeout": 0,'),
-    'vendor/etc/msm_irqbalance.conf': blob_fixup()
-        .regex_replace('IGNORED_IRQ=27,23,38$', 'IGNORED_IRQ=27,23,38,115,332'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
