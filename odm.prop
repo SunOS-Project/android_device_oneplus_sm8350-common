@@ -9,6 +9,11 @@ ro.config.vc_call_vol_steps=9
 ro.vendor.audio.sdk.fluencetype=fluence
 ro.vendor.qti.va_odm.support=1
 
+# Camera
+oplus.camera.packname=com.oplus.camera
+oplus.camera.activityname=com.oplus.camera
+ro.oplus.system.camera.name=com.oplus.camera
+
 # Bluetooth
 persist.vendor.bluetooth.modem_nv_support=true
 
